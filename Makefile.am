@@ -22,7 +22,8 @@ EXTRA_DIST = lbzcmp.in lbzdiff.in lbzegrep.in lbzexe.in lbzfgrep.in \
     autogen.sh
 #lbzrecover.1
 
-bin_PROGRAMS = lbzrecover
+bin_PROGRAMS = lbzmerge lbzrecover
+lbzmerge_SOURCES = lbzmerge.c
 lbzrecover_SOURCES = lbzrecover.c
 
 bin_SCRIPTS = lbzcmp lbzdiff lbzegrep lbzexe lbzfgrep \
