@@ -205,7 +205,7 @@ static void data(void) {
     m[0] = t;
     make_tree(t);
     for (i = 0; i < 50; i++)
-      if (get_sym() == as-1)
+      if (get_sym() == as-1u)
         return;
   }
   bad();

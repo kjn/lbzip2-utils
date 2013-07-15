@@ -181,7 +181,6 @@ static
 void begin(void)
 {
   int i;
-  unsigned bit;
 
   increment(oname+3, oname+13);
 
@@ -210,8 +209,6 @@ void begin(void)
 static void
 end(void)
 {
-  int i;
-
   obuff >>= 48;
   olive -= 48;
   put(24, 0x177245UL);
