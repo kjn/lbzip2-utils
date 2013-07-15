@@ -34,8 +34,8 @@ if test x"$1" = x-r; then
   exit
 fi
 
-#url=http://git.savannah.gnu.org/cgit/gzip.git/plain
-url=file:/home/kojan/src/gzip
+url=http://git.savannah.gnu.org/cgit/gzip.git/plain
+test -d gzip-src && file:"$PWD"/gzip-src
 
 import() {(
     trap "rm -f $1.tmp" 0
