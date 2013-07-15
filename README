@@ -1,0 +1,9 @@
+lbzip2 utilities
+
+This is a collection of utility programs to work with compressed files
+in bz2 format.  These utilities are supplementary to lbzip2
+compression tool.
+
+These programs are not distributed together with lbzip2 because lbzip2
+has different goals and release cycle.  In particaular, utilities in
+this repository are not as well tested as lbzip2 itself.
