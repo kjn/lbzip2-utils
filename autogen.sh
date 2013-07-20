@@ -57,7 +57,7 @@ s/\*\[-\.\]gz\* \| \*\[-\.\]\[zZ\] \| \*\.t\[ga\]z\
 s/gzip -cv9/lbzip2 -c9/g;
 s/gzip -cdf?q?/lbzip2 -cdq/g;
 s/gzip/lbzip2/g;
-s/gunzip/bunzip2/g;
+s/gunzip/lbunzip2/g;
 s/gzexe/lbzexe/g; s/GZEXE/LBZEXE/g;
 s/z(cmp|diff|[ef]?grep|force|less|more)/lbz$1/g;
 s/Z(CMP|DIFF|[EF]?GREP|FORCE|LESS|MORE)/LBZ$1/g;
