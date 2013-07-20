@@ -60,6 +60,7 @@ s/gzip/lbzip2/g;
 s/gunzip/lbunzip2/g;
 s/gzexe/lbzexe/g; s/GZEXE/LBZEXE/g;
 s/z(cmp|diff|[ef]?grep|force|less|more)/lbz$1/g;
+s/Z(cmp|diff|[ef]?grep|force|less|more)/Lbz$1/g;
 s/Z(CMP|DIFF|[EF]?GREP|FORCE|LESS|MORE)/LBZ$1/g;
 s/, znew\(1\)//g;
 s/\.gz/.bz2/g;
