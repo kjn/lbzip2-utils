@@ -60,7 +60,7 @@ static void write(int c) {
 
 /* Print an error message and terminate. */
 static void bad(void) {
-  fprintf(stderr, "minbzcat: data error in bz2 file\n");
+  fprintf(stderr, "lbzmerge: data error in bz2 file\n");
   exit(EXIT_FAILURE);
 }
 
