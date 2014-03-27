@@ -1,5 +1,5 @@
 #!/bin/sh
-# lbzforce: force a gz extension on all lbzip2 files so that lbzip2 will not
+# lbzforce: force a bz2 extension on all lbzip2 files so that lbzip2 will not
 # compress them twice.
 #
 # This can be useful for files with names truncated after a file transfer.

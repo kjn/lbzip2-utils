@@ -47,7 +47,7 @@ s/z(cmp|diff|[ef]?grep|force|less|more)/lbz$1/g;
 s/Z(cmp|diff|[ef]?grep|force|less|more)/Lbz$1/g;
 s/Z(CMP|DIFF|[EF]?GREP|FORCE|LESS|MORE)/LBZ$1/g;
 s/, znew\(1\)//g;
-s/\.gz/.bz2/g;
+s/gz/bz2/g;
 
 s/lbzip2 -lv/head -c4/g;
 s/\^defl/BZh[1-9]/g;
