@@ -1,0 +1,39 @@
+.TH LBZIP2 1 "27 March 2014" "lbzip2-utils-1.1" "User commands"
+
+.SH NAME
+lbzrecover \- recovers data from damaged
+.B bz2
+files
+
+.SH SYNOPSIS
+.BR lbzrecover "|" bzip2recover
+.I FILE
+
+
+.SH DESCRIPTION
+Big
+.B bz2
+files usually consist of more than one independent blocks.  If some
+part of
+.B bz2
+file becomes damaged,
+.B lbzrecover
+utility may be used to recover data from undamaged blocks.
+
+.B lbzrecover
+scans input
+.I FILE
+and splits it into separate
+.B bz2
+files which then can be tested and decompressed with
+.BR lbzip2 .
+
+
+.SH AUTHORS
+.B lbzrecover
+was written by Mikolaj Izdebski.
+
+
+.SH "SEE ALSO"
+.TP
+.B lbzip2(1)
