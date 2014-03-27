@@ -1,5 +1,5 @@
 #-
-# Copyright (C) 2013 Mikolaj Izdebski
+# Copyright (C) 2013, 2014 Mikolaj Izdebski
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,12 +15,18 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-EXTRA_DIST = lbzcmp.in lbzdiff.in lbzegrep.in lbzexe.in lbzfgrep.in \
-    lbzforce.in lbzgrep.in lbzless.in lbzmore.in \
-    lbzcmp.1 lbzdiff.1 lbzegrep.1 lbzexe.1 lbzfgrep.1 \
-    lbzforce.1 lbzgrep.1 lbzless.1 lbzmore.1 \
-    autogen.sh
-#lbzrecover.1
+EXTRA_DIST = \
+    lbzexe.in   gzexe.in   lbzexe.1    gzexe.1   \
+    lbzcmp.in   zcmp.in    lbzcmp.1    zcmp.1    \
+    lbzdiff.in  zdiff.in   lbzdiff.1   zdiff.1   \
+    lbzgrep.in  zgrep.in   lbzgrep.1   zgrep.1   \
+    lbzegrep.in zegrep.in  lbzegrep.1            \
+    lbzfgrep.in zfgrep.in  lbzfgrep.1            \
+    lbzforce.in zforce.in  lbzforce.1  zforce.1  \
+    lbzless.in  zless.in   lbzless.1   zless.1   \
+    lbzmore.in  zmore.in   lbzmore.1   zmore.1   \
+    \
+    import.sh autogen.sh #lbzrecover.1
 
 bin_PROGRAMS = lbzmerge lbzrecover
 lbzmerge_SOURCES = lbzmerge.c
