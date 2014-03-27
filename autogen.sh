@@ -1,6 +1,6 @@
 #!/bin/sh
 #-
-# Copyright (C) 2011, 2012, 2013 Mikolaj Izdebski
+# Copyright (C) 2011, 2012, 2013, 2014 Mikolaj Izdebski
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,13 +34,7 @@ if test x"$1" = x-r; then
   exit
 fi
 
-url=http://git.savannah.gnu.org/cgit/gzip.git/plain
-test -d gzip-src && file:"$PWD"/gzip-src
-
 import() {(
-    trap "rm -f $1.tmp" 0
-    curl -s $url/$2 >$1.tmp
-
     perl -e'
 
 undef $/;
@@ -72,7 +66,7 @@ s/\n\nReport bugs [^"]*"/"/;
 
 print;
 
-' <$1.tmp >$1
+' <$2 >$1
 )&}
 
 import lbzexe.in   gzexe.in
