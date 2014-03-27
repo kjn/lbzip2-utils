@@ -75,7 +75,7 @@ exec 3>&1
 
 if test $# -eq 1; then
   case $1 in
-  *[-.]gz* | *[-.][zZ] | *.t[ga]z)
+  *.bz2 | *.tbz | *.tbz2 | *.tz2)
     FILE=`expr "X$1" : 'X\(.*\)[.][tbz2]*$'`
     lbzip2_status=$(
       exec 4>&1
@@ -87,9 +87,9 @@ if test $# -eq 1; then
   esac
 elif test $# -eq 2; then
         case "$1" in
-        *[-.]gz* | *[-.][zZ] | *.t[ga]z | -)
+        *.bz2 | *.tbz | *.tbz2 | *.tz2 | -)
                 case "$2" in
-                *[-.]gz* | *[-.][zZ] | *.t[ga]z | -)
+                *.bz2 | *.tbz | *.tbz2 | *.tz2 | -)
                     if test "$1$2" = --; then
                         lbzip2_status=$(
                           exec 4>&1
@@ -146,7 +146,7 @@ elif test $# -eq 2; then
                     );;
                 esac;;
         *)      case "$2" in
-                *[-.]gz* | *[-.][zZ] | *.t[ga]z | -)
+                *.bz2 | *.tbz | *.tbz2 | *.tz2 | -)
                         lbzip2_status=$(
                           exec 4>&1
                           (lbzip2 -cdq -- "$2" 4>&-; echo $? >&4) 3>&- |

@@ -36,8 +36,7 @@ s/z\$prog/lbz\$prog/g;
 s/\[-\.\]\[zZtga\]\*/[.][tbz2]*/g;
 s/\.tgz/.tbz/g;
 
-s/\*\[-\.\]gz\* \| \*\[-\.\]\[zZ\] \| \*\.t\[ga\]z\
-|\*\[-\.\]z \| \*\[-\.\]gz \| \*\.t\[ag\]z/*.bz2 | *.tbz | *.tbz2 | *.tz2/g;
+s/\*\[-\.\]gz\* \| \*\[-\.\]\[zZ\] \| \*\.t\[ga\]z|\*\[-\.\]z \| \*\[-\.\]gz \| \*\.t\[ag\]z/*.bz2 | *.tbz | *.tbz2 | *.tz2/g;
 
 s/gzip -cv9/lbzip2 -c9/g;
 s/gzip -cdf?q?/lbzip2 -cdq/g;
