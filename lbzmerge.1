@@ -1,0 +1,41 @@
+.TH LBZIP2 1 "27 March 2014" "lbzip2-utils-1.1" "User commands"
+
+.SH NAME
+lbzmerge \- concatenate
+.B bz2
+files
+
+.SH SYNOPSIS
+.BR lbzmerge
+.I FILE
+
+
+.SH DESCRIPTION
+.B bz2
+files can be merged by just concatenating them.  However some tools
+and libraries may not be able to process such files properly.
+.B lbzmerge
+utility can be used to merge
+.B bz2
+without recompressing them in such way that all tools should be able
+to handle the resulting
+.B bz2
+file.
+
+.B lbzmerge
+reads
+.B bz2
+file from standard input and rewrites it to standard output.  The
+resulting file contains only one
+.B bz2
+stream, even if input file consisted of multiple streams.
+
+
+.SH AUTHORS
+.B lbzmerge
+was written by Mikolaj Izdebski.
+
+
+.SH "SEE ALSO"
+.TP
+.B lbzip2(1)

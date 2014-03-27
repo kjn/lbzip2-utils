@@ -26,7 +26,7 @@ EXTRA_DIST = \
     lbzless.in  zless.in   lbzless.1   zless.1   \
     lbzmore.in  zmore.in   lbzmore.1   zmore.1   \
     \
-    lbzrecover.1 \
+    lbzmerge.1 lbzrecover.1 \
     import.sh autogen.sh
 
 bin_PROGRAMS = lbzmerge lbzrecover
@@ -36,7 +36,8 @@ lbzrecover_SOURCES = lbzrecover.c
 bin_SCRIPTS = lbzcmp lbzdiff lbzegrep lbzexe lbzfgrep \
     lbzforce lbzgrep lbzless lbzmore
 man_MANS = lbzcmp.1 lbzdiff.1 lbzegrep.1 lbzexe.1 lbzfgrep.1 \
-    lbzforce.1 lbzgrep.1 lbzless.1 lbzmore.1 lbzrecover.1
+    lbzforce.1 lbzgrep.1 lbzless.1 lbzmore.1 \
+    lbzmerge.1 lbzrecover.1
 MOSTLYCLEANFILES = lbzcmp lbzdiff lbzegrep lbzexe lbzfgrep \
     lbzforce lbzgrep lbzless lbzmore
 
