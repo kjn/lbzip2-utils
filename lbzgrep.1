@@ -1,0 +1,29 @@
+.TH LBZGREP 1
+.SH NAME
+lbzgrep \- search possibly compressed files for a regular expression
+.SH SYNOPSIS
+.B lbzgrep
+[ grep_options ]
+.BI  [\ -e\ ] " pattern"
+.IR filename ".\|.\|."
+.SH DESCRIPTION
+.I Lbzgrep
+invokes
+.I grep
+on compressed or lbzip2ped files.
+All options specified are passed directly to
+.IR grep .
+If no file is specified, then the standard input is decompressed
+if necessary and fed to grep.
+Otherwise the given files are uncompressed if necessary and fed to
+.IR grep .
+.PP
+If the GREP environment variable is set,
+.I lbzgrep
+uses it as the
+.I grep
+program to be invoked.
+.SH AUTHOR
+Charles Levert (charles@comm.polymtl.ca)
+.SH "SEE ALSO"
+grep(1), lbzexe(1), lbzip2(1), lbzdiff(1), lbzforce(1), lbzmore(1)
