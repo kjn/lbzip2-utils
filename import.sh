@@ -38,7 +38,7 @@ s/\.tgz/.tbz/g;
 
 s/\*\[-\.\]gz\* \| \*\[-\.\]\[zZ\] \| \*\.t\[ga\]z|\*\[-\.\]z \| \*\[-\.\]gz \| \*\.t\[ag\]z/*.bz2 | *.tbz | *.tbz2 | *.tz2/g;
 
-s/gzip -cv9/lbzip2 -c9/g;
+s/gzip -cv9/u=; : | lbzip2 -u &>\/dev\/null && u=u; lbzip2 -c9\$u/g;
 s/gzip -cdf?q?/lbzip2 -cdq/g;
 s/gzip/lbzip2/g;
 s/gunzip/lbunzip2/g;

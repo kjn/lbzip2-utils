@@ -187,7 +187,7 @@ else
   (exit 127); res=127
 fi; exit $res
 EOF
-    lbzip2 -c9 "$file") > "$tmp" || {
+    u=; : | lbzip2 -u &>/dev/null && u=u; lbzip2 -c9$u "$file") > "$tmp" || {
       res=$?
       echo >&2 "$0: compression not possible for $i, file unchanged."
       continue
